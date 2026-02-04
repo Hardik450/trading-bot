@@ -1,0 +1,5 @@
+requests==2.31.0
+python-binance==1.0.19
+typer==0.12.3
+python-dotenv==1.0.0
+pydantic==2.5.0

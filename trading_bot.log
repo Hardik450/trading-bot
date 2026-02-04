@@ -1,0 +1,264 @@
+2026-02-04 21:27:40,703 - binance_client - INFO - Initialized Binance client with base URL: https://testnet.binancefuture.com
+2026-02-04 21:27:54,317 - binance_client - INFO - Initialized Binance client with base URL: https://testnet.binancefuture.com
+2026-02-04 21:27:54,318 - order_service - INFO - Order service initialized
+2026-02-04 21:27:55,289 - binance_client - ERROR - API error [-2015]: Invalid API-key, IP, or permissions for action
+2026-02-04 21:27:55,290 - order_service - ERROR - Failed to get account balance: Invalid API-key, IP, or permissions for action
+2026-02-04 21:27:55,297 - __main__ - ERROR - Error fetching balance: Invalid API-key, IP, or permissions for action
+Traceback (most recent call last):
+  File "D:\internship\2nd comp\files\binance_client.py", line 104, in _send_signed_request
+    response.raise_for_status()
+  File "D:\Hp\Program Files\Lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://testnet.binancefuture.com/fapi/v2/account?timestamp=1770220674330&signature=9a377799f63ad562c03b0ac50b93277e5f2ad03fd01a542f5d75b126347767cf
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\internship\2nd comp\files\main.py", line 199, in balance
+    account_info = service.get_account_balance()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\internship\2nd comp\files\order_service.py", line 116, in get_account_balance
+    account_info = self.client.get_account_info()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\internship\2nd comp\files\binance_client.py", line 227, in get_account_info
+    return self._send_signed_request("GET", endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\internship\2nd comp\files\binance_client.py", line 125, in _send_signed_request
+    raise BinanceAPIError(
+exceptions.BinanceAPIError: Invalid API-key, IP, or permissions for action
+2026-02-04 21:32:43,527 - binance_client - INFO - Initialized Binance client with base URL: https://testnet.binancefuture.com
+2026-02-04 21:32:43,647 - order_service - INFO - Order service initialized
+2026-02-04 21:32:46,043 - binance_client - ERROR - API error [-2015]: Invalid API-key, IP, or permissions for action
+2026-02-04 21:32:46,046 - order_service - ERROR - Failed to get account balance: Invalid API-key, IP, or permissions for action
+2026-02-04 21:32:46,054 - __main__ - ERROR - Error fetching balance: Invalid API-key, IP, or permissions for action
+Traceback (most recent call last):
+  File "D:\internship\2nd comp\files\binance_client.py", line 104, in _send_signed_request
+    response.raise_for_status()
+  File "D:\Hp\Program Files\Lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://testnet.binancefuture.com/fapi/v2/account?timestamp=1770220963797&signature=53c87a26d21fbb6da3d64dac67ab35376f882494bd403fd214c0018da7d71f98
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\internship\2nd comp\files\main.py", line 199, in balance
+    account_info = service.get_account_balance()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\internship\2nd comp\files\order_service.py", line 116, in get_account_balance
+    account_info = self.client.get_account_info()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\internship\2nd comp\files\binance_client.py", line 227, in get_account_info
+    return self._send_signed_request("GET", endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\internship\2nd comp\files\binance_client.py", line 125, in _send_signed_request
+    raise BinanceAPIError(
+exceptions.BinanceAPIError: Invalid API-key, IP, or permissions for action
+2026-02-04 21:41:46,325 - binance_client - INFO - Initialized Binance client with base URL: https://testnet.binancefuture.com
+2026-02-04 21:41:46,386 - order_service - INFO - Order service initialized
+2026-02-04 21:41:47,712 - order_service - INFO - Retrieved account information
+2026-02-04 21:42:19,692 - __main__ - ERROR - Unexpected error: 'str' object has no attribute 'value'
+Traceback (most recent call last):
+  File "D:\internship\2nd comp\files\main.py", line 104, in order
+    table.add_row("Side", order_request.side.value)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'value'
+2026-02-04 21:44:01,912 - __main__ - ERROR - Unexpected error: 'str' object has no attribute 'value'
+Traceback (most recent call last):
+  File "D:\internship\2nd comp\files\main.py", line 108, in order
+    table.add_row("Type", order_request.order_type.value)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'value'
+2026-02-04 21:45:22,518 - binance_client - INFO - Initialized Binance client with base URL: https://testnet.binancefuture.com
+2026-02-04 21:45:22,540 - order_service - INFO - Order service initialized
+2026-02-04 21:45:22,568 - order_service - INFO - Validating order request...
+2026-02-04 21:45:23,921 - order_service - INFO - Symbol BTCUSDT validated successfully
+2026-02-04 21:45:23,923 - order_service - INFO - ============================================================
+2026-02-04 21:45:23,924 - order_service - INFO - ORDER REQUEST SUMMARY
+2026-02-04 21:45:23,924 - order_service - INFO - ============================================================
+2026-02-04 21:45:23,925 - order_service - INFO - Symbol: BTCUSDT
+2026-02-04 21:45:23,925 - order_service - INFO - Side: BUY
+2026-02-04 21:45:23,925 - order_service - INFO - Type: MARKET
+2026-02-04 21:45:23,926 - order_service - INFO - Quantity: 0.001
+2026-02-04 21:45:23,927 - order_service - INFO - ============================================================
+2026-02-04 21:45:23,927 - order_service - ERROR - Order placement failed: 'str' object has no attribute 'value'
+2026-02-04 21:45:23,933 - __main__ - ERROR - Unexpected error: 'str' object has no attribute 'value'
+Traceback (most recent call last):
+  File "D:\internship\2nd comp\files\main.py", line 125, in order
+    order_response = service.place_order(order_request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\internship\2nd comp\files\order_service.py", line 87, in place_order
+    side=order_request.side.value,
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'value'
+2026-02-04 21:47:00,526 - binance_client - INFO - Initialized Binance client with base URL: https://testnet.binancefuture.com
+2026-02-04 21:47:00,546 - order_service - INFO - Order service initialized
+2026-02-04 21:47:00,640 - order_service - INFO - Validating order request...
+2026-02-04 21:47:04,752 - order_service - INFO - Symbol BTCUSDT validated successfully
+2026-02-04 21:47:04,755 - order_service - INFO - ============================================================
+2026-02-04 21:47:04,755 - order_service - INFO - ORDER REQUEST SUMMARY
+2026-02-04 21:47:04,756 - order_service - INFO - ============================================================
+2026-02-04 21:47:04,759 - order_service - INFO - Symbol: BTCUSDT
+2026-02-04 21:47:04,759 - order_service - INFO - Side: BUY
+2026-02-04 21:47:04,760 - order_service - INFO - Type: MARKET
+2026-02-04 21:47:04,763 - order_service - INFO - Quantity: 0.001
+2026-02-04 21:47:04,768 - order_service - INFO - ============================================================
+2026-02-04 21:47:04,768 - binance_client - INFO - Placing MARKET BUY order for 0.001 BTCUSDT
+2026-02-04 21:47:05,266 - binance_client - ERROR - API error [-4164]: Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-02-04 21:47:05,267 - order_service - ERROR - Order placement failed: Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-02-04 21:47:05,274 - __main__ - ERROR - Binance API error: Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-02-04 21:48:49,073 - binance_client - INFO - Initialized Binance client with base URL: https://testnet.binancefuture.com
+2026-02-04 21:48:49,185 - order_service - INFO - Order service initialized
+2026-02-04 21:48:49,339 - order_service - INFO - Validating order request...
+2026-02-04 21:48:51,161 - order_service - INFO - Symbol BTCUSDT validated successfully
+2026-02-04 21:48:51,164 - order_service - INFO - ============================================================
+2026-02-04 21:48:51,165 - order_service - INFO - ORDER REQUEST SUMMARY
+2026-02-04 21:48:51,166 - order_service - INFO - ============================================================
+2026-02-04 21:48:51,166 - order_service - INFO - Symbol: BTCUSDT
+2026-02-04 21:48:51,166 - order_service - INFO - Side: BUY
+2026-02-04 21:48:51,166 - order_service - INFO - Type: MARKET
+2026-02-04 21:48:51,168 - order_service - INFO - Quantity: 0.002
+2026-02-04 21:48:51,168 - order_service - INFO - ============================================================
+2026-02-04 21:48:51,168 - binance_client - INFO - Placing MARKET BUY order for 0.002 BTCUSDT
+2026-02-04 21:48:51,400 - order_service - INFO - ============================================================
+2026-02-04 21:48:51,400 - order_service - INFO - ORDER EXECUTED SUCCESSFULLY
+2026-02-04 21:48:51,400 - order_service - INFO - ============================================================
+2026-02-04 21:48:51,401 - order_service - INFO - 
+Order ID: 12114527631
+Symbol: BTCUSDT
+Status: NEW
+Side: BUY
+Type: MARKET
+Quantity: 0.002
+Executed Quantity: 0.000
+Cumulative Quote: 0.00000
+2026-02-04 21:48:51,402 - order_service - INFO - ============================================================
+2026-02-04 21:48:51,408 - __main__ - INFO - Order completed successfully: Order ID 12114527631
+2026-02-04 21:49:37,906 - binance_client - INFO - Initialized Binance client with base URL: https://testnet.binancefuture.com
+2026-02-04 21:49:37,920 - order_service - INFO - Order service initialized
+2026-02-04 21:49:37,987 - order_service - INFO - Validating order request...
+2026-02-04 21:49:39,371 - order_service - INFO - Symbol BTCUSDT validated successfully
+2026-02-04 21:49:39,372 - order_service - INFO - ============================================================
+2026-02-04 21:49:39,372 - order_service - INFO - ORDER REQUEST SUMMARY
+2026-02-04 21:49:39,372 - order_service - INFO - ============================================================
+2026-02-04 21:49:39,372 - order_service - INFO - Symbol: BTCUSDT
+2026-02-04 21:49:39,373 - order_service - INFO - Side: SELL
+2026-02-04 21:49:39,373 - order_service - INFO - Type: MARKET
+2026-02-04 21:49:39,374 - order_service - INFO - Quantity: 0.002
+2026-02-04 21:49:39,374 - order_service - INFO - ============================================================
+2026-02-04 21:49:39,374 - binance_client - INFO - Placing MARKET SELL order for 0.002 BTCUSDT
+2026-02-04 21:49:39,565 - order_service - INFO - ============================================================
+2026-02-04 21:49:39,584 - order_service - INFO - ORDER EXECUTED SUCCESSFULLY
+2026-02-04 21:49:39,585 - order_service - INFO - ============================================================
+2026-02-04 21:49:39,586 - order_service - INFO - 
+Order ID: 12114535684
+Symbol: BTCUSDT
+Status: NEW
+Side: SELL
+Type: MARKET
+Quantity: 0.002
+Executed Quantity: 0.000
+Cumulative Quote: 0.00000
+2026-02-04 21:49:39,586 - order_service - INFO - ============================================================
+2026-02-04 21:49:39,603 - __main__ - INFO - Order completed successfully: Order ID 12114535684
+2026-02-04 21:49:45,063 - binance_client - INFO - Initialized Binance client with base URL: https://testnet.binancefuture.com
+2026-02-04 21:49:45,063 - order_service - INFO - Order service initialized
+2026-02-04 21:49:45,587 - order_service - INFO - Retrieved account information
+2026-02-04 21:51:55,771 - binance_client - INFO - Initialized Binance client with base URL: https://testnet.binancefuture.com
+2026-02-04 21:51:55,933 - order_service - INFO - Order service initialized
+2026-02-04 21:51:56,035 - order_service - INFO - Validating order request...
+2026-02-04 21:51:58,973 - order_service - INFO - Symbol BTCUSDT validated successfully
+2026-02-04 21:51:58,976 - order_service - INFO - ============================================================
+2026-02-04 21:51:58,977 - order_service - INFO - ORDER REQUEST SUMMARY
+2026-02-04 21:51:58,978 - order_service - INFO - ============================================================
+2026-02-04 21:51:58,978 - order_service - INFO - Symbol: BTCUSDT
+2026-02-04 21:51:58,978 - order_service - INFO - Side: BUY
+2026-02-04 21:51:58,979 - order_service - INFO - Type: LIMIT
+2026-02-04 21:51:58,979 - order_service - INFO - Quantity: 0.001
+2026-02-04 21:51:58,979 - order_service - INFO - Price: 45000.0
+2026-02-04 21:51:58,980 - order_service - INFO - ============================================================
+2026-02-04 21:51:58,980 - binance_client - INFO - Placing LIMIT BUY order for 0.001 BTCUSDT
+2026-02-04 21:51:58,980 - binance_client - INFO - Limit price: 45000.0
+2026-02-04 21:51:59,299 - binance_client - ERROR - API error [-4164]: Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-02-04 21:51:59,299 - order_service - ERROR - Order placement failed: Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-02-04 21:51:59,311 - __main__ - ERROR - Binance API error: Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-02-04 21:52:12,722 - binance_client - INFO - Initialized Binance client with base URL: https://testnet.binancefuture.com
+2026-02-04 21:52:12,723 - order_service - INFO - Order service initialized
+2026-02-04 21:52:12,732 - order_service - INFO - Validating order request...
+2026-02-04 21:52:14,476 - order_service - INFO - Symbol BTCUSDT validated successfully
+2026-02-04 21:52:14,477 - order_service - INFO - ============================================================
+2026-02-04 21:52:14,478 - order_service - INFO - ORDER REQUEST SUMMARY
+2026-02-04 21:52:14,478 - order_service - INFO - ============================================================
+2026-02-04 21:52:14,478 - order_service - INFO - Symbol: BTCUSDT
+2026-02-04 21:52:14,479 - order_service - INFO - Side: BUY
+2026-02-04 21:52:14,479 - order_service - INFO - Type: LIMIT
+2026-02-04 21:52:14,480 - order_service - INFO - Quantity: 0.002
+2026-02-04 21:52:14,480 - order_service - INFO - Price: 45000.0
+2026-02-04 21:52:14,481 - order_service - INFO - ============================================================
+2026-02-04 21:52:14,481 - binance_client - INFO - Placing LIMIT BUY order for 0.002 BTCUSDT
+2026-02-04 21:52:14,482 - binance_client - INFO - Limit price: 45000.0
+2026-02-04 21:52:15,366 - binance_client - ERROR - API error [-4164]: Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-02-04 21:52:15,366 - order_service - ERROR - Order placement failed: Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-02-04 21:52:15,370 - __main__ - ERROR - Binance API error: Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-02-04 21:52:34,765 - binance_client - INFO - Initialized Binance client with base URL: https://testnet.binancefuture.com
+2026-02-04 21:52:34,766 - order_service - INFO - Order service initialized
+2026-02-04 21:52:34,777 - order_service - INFO - Validating order request...
+2026-02-04 21:52:37,099 - order_service - INFO - Symbol BTCUSDT validated successfully
+2026-02-04 21:52:37,102 - order_service - INFO - ============================================================
+2026-02-04 21:52:37,104 - order_service - INFO - ORDER REQUEST SUMMARY
+2026-02-04 21:52:37,104 - order_service - INFO - ============================================================
+2026-02-04 21:52:37,105 - order_service - INFO - Symbol: BTCUSDT
+2026-02-04 21:52:37,123 - order_service - INFO - Side: BUY
+2026-02-04 21:52:37,124 - order_service - INFO - Type: LIMIT
+2026-02-04 21:52:37,124 - order_service - INFO - Quantity: 0.005
+2026-02-04 21:52:37,125 - order_service - INFO - Price: 45000.0
+2026-02-04 21:52:37,126 - order_service - INFO - ============================================================
+2026-02-04 21:52:37,126 - binance_client - INFO - Placing LIMIT BUY order for 0.005 BTCUSDT
+2026-02-04 21:52:37,126 - binance_client - INFO - Limit price: 45000.0
+2026-02-04 21:52:37,360 - order_service - INFO - ============================================================
+2026-02-04 21:52:37,360 - order_service - INFO - ORDER EXECUTED SUCCESSFULLY
+2026-02-04 21:52:37,361 - order_service - INFO - ============================================================
+2026-02-04 21:52:37,361 - order_service - INFO - 
+Order ID: 12114568713
+Symbol: BTCUSDT
+Status: NEW
+Side: BUY
+Type: LIMIT
+Quantity: 0.005
+Executed Quantity: 0.000
+Price: 45000.00
+Cumulative Quote: 0.00000
+2026-02-04 21:52:37,361 - order_service - INFO - ============================================================
+2026-02-04 21:52:37,374 - __main__ - INFO - Order completed successfully: Order ID 12114568713
+2026-02-04 21:53:22,405 - binance_client - INFO - Initialized Binance client with base URL: https://testnet.binancefuture.com
+2026-02-04 21:53:22,453 - order_service - INFO - Order service initialized
+2026-02-04 21:53:22,467 - order_service - INFO - Validating order request...
+2026-02-04 21:53:26,086 - order_service - INFO - Symbol ETHUSDT validated successfully
+2026-02-04 21:53:26,088 - order_service - INFO - ============================================================
+2026-02-04 21:53:26,088 - order_service - INFO - ORDER REQUEST SUMMARY
+2026-02-04 21:53:26,088 - order_service - INFO - ============================================================
+2026-02-04 21:53:26,088 - order_service - INFO - Symbol: ETHUSDT
+2026-02-04 21:53:26,089 - order_service - INFO - Side: SELL
+2026-02-04 21:53:26,089 - order_service - INFO - Type: LIMIT
+2026-02-04 21:53:26,089 - order_service - INFO - Quantity: 0.01
+2026-02-04 21:53:26,089 - order_service - INFO - Price: 3500.0
+2026-02-04 21:53:26,090 - order_service - INFO - ============================================================
+2026-02-04 21:53:26,090 - binance_client - INFO - Placing LIMIT SELL order for 0.01 ETHUSDT
+2026-02-04 21:53:26,090 - binance_client - INFO - Limit price: 3500.0
+2026-02-04 21:53:26,738 - order_service - INFO - ============================================================
+2026-02-04 21:53:26,738 - order_service - INFO - ORDER EXECUTED SUCCESSFULLY
+2026-02-04 21:53:26,739 - order_service - INFO - ============================================================
+2026-02-04 21:53:26,739 - order_service - INFO - 
+Order ID: 8258274047
+Symbol: ETHUSDT
+Status: NEW
+Side: SELL
+Type: LIMIT
+Quantity: 0.010
+Executed Quantity: 0.000
+Price: 3500.00
+Cumulative Quote: 0.00000
+2026-02-04 21:53:26,739 - order_service - INFO - ============================================================
+2026-02-04 21:53:26,750 - __main__ - INFO - Order completed successfully: Order ID 8258274047
+2026-02-04 21:53:44,593 - binance_client - INFO - Initialized Binance client with base URL: https://testnet.binancefuture.com
+2026-02-04 21:53:44,593 - order_service - INFO - Order service initialized
+2026-02-04 21:53:45,634 - order_service - INFO - Retrieved position information for all symbols
